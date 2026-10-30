@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<defs><radialGradient id="g" cx="0.9" cy="0.05" r="1"><stop offset="0" stop-color="#c084fc" stop-opacity="0.3"/><stop offset="0.6" stop-color="#c084fc" stop-opacity="0"/></radialGradient></defs>
+<rect width="1600" height="1000" fill="#0e0e11"/><rect width="1600" height="1000" fill="url(#g)"/>
+
+<rect x="80" y="60" width="1440" height="200" rx="24" fill="#16161a"/>
+<circle cx="180" cy="160" r="60" fill="#24242a" stroke="#c084fc" stroke-width="4"/>
+<text x="280" y="150" font-family="Georgia, serif" font-size="52" fill="#ededed">Elowen Thorne</text>
+<text x="282" y="196" font-family="monospace" font-size="22" fill="#8b8b92">LVL 5 · HALF-ELF RANGER</text>
+<text x="1100" y="128" font-family="monospace" font-size="20" fill="#8b8b92">HIT POINTS</text>
+<text x="1440" y="128" text-anchor="end" font-family="monospace" font-size="20" fill="#ededed">31 / 44</text>
+<rect x="1100" y="148" width="340" height="18" rx="9" fill="#2a2a31"/><rect x="1100" y="148" width="240" height="18" rx="9" fill="#ff6b6b"/>
+<rect x="1100" y="190" width="104" height="44" rx="12" fill="#1e1e24"/><rect x="1118" y="207" width="68" height="10" rx="5" fill="#4a4a52"/><rect x="1216" y="190" width="104" height="44" rx="12" fill="#1e1e24"/><rect x="1234" y="207" width="68" height="10" rx="5" fill="#4a4a52"/><rect x="1332" y="190" width="104" height="44" rx="12" fill="#1e1e24"/><rect x="1350" y="207" width="68" height="10" rx="5" fill="#4a4a52"/>
+
+<rect x="80" y="300" width="280" height="210" rx="24" fill="#16161a"/>
+<text x="220" y="350" text-anchor="middle" font-family="monospace" font-size="22" letter-spacing="4" fill="#8b8b92">STR</text>
+<text x="220" y="435" text-anchor="middle" font-family="Georgia, serif" font-size="76" fill="#ededed">+2</text>
+<rect x="185" y="460" width="70" height="32" rx="16" fill="#24242a"/>
+<text x="220" y="483" text-anchor="middle" font-family="monospace" font-size="20" fill="#c084fc">14</text><rect x="380" y="300" width="280" height="210" rx="24" fill="#16161a"/>
+<text x="520" y="350" text-anchor="middle" font-family="monospace" font-size="22" letter-spacing="4" fill="#8b8b92">DEX</text>
+<text x="520" y="435" text-anchor="middle" font-family="Georgia, serif" font-size="76" fill="#ededed">+3</text>
+<rect x="485" y="460" width="70" height="32" rx="16" fill="#24242a"/>
+<text x="520" y="483" text-anchor="middle" font-family="monospace" font-size="20" fill="#c084fc">16</text><rect x="680" y="300" width="280" height="210" rx="24" fill="#16161a"/>
+<text x="820" y="350" text-anchor="middle" font-family="monospace" font-size="22" letter-spacing="4" fill="#8b8b92">CON</text>
+<text x="820" y="435" text-anchor="middle" font-family="Georgia, serif" font-size="76" fill="#ededed">+1</text>
+<rect x="785" y="460" width="70" height="32" rx="16" fill="#24242a"/>
+<text x="820" y="483" text-anchor="middle" font-family="monospace" font-size="20" fill="#c084fc">13</text><rect x="80" y="530" width="280" height="210" rx="24" fill="#16161a"/>
+<text x="220" y="580" text-anchor="middle" font-family="monospace" font-size="22" letter-spacing="4" fill="#8b8b92">INT</text>
+<text x="220" y="665" text-anchor="middle" font-family="Georgia, serif" font-size="76" fill="#ededed">+0</text>
+<rect x="185" y="690" width="70" height="32" rx="16" fill="#24242a"/>
+<text x="220" y="713" text-anchor="middle" font-family="monospace" font-size="20" fill="#c084fc">10</text><rect x="380" y="530" width="280" height="210" rx="24" fill="#16161a"/>
+<text x="520" y="580" text-anchor="middle" font-family="monospace" font-size="22" letter-spacing="4" fill="#8b8b92">WIS</text>
+<text x="520" y="665" text-anchor="middle" font-family="Georgia, serif" font-size="76" fill="#ededed">+1</text>
+<rect x="485" y="690" width="70" height="32" rx="16" fill="#24242a"/>
+<text x="520" y="713" text-anchor="middle" font-family="monospace" font-size="20" fill="#c084fc">12</text><rect x="680" y="530" width="280" height="210" rx="24" fill="#16161a"/>
+<text x="820" y="580" text-anchor="middle" font-family="monospace" font-size="22" letter-spacing="4" fill="#8b8b92">CHA</text>
+<text x="820" y="665" text-anchor="middle" font-family="Georgia, serif" font-size="76" fill="#ededed">-1</text>
+<rect x="785" y="690" width="70" height="32" rx="16" fill="#24242a"/>
+<text x="820" y="713" text-anchor="middle" font-family="monospace" font-size="20" fill="#c084fc">8</text>
+
+<rect x="80" y="760" width="880" height="180" rx="24" fill="#16161a"/>
+<rect x="120" y="795" width="300" height="14" rx="7" fill="#4a4a52"/><rect x="700" y="795" width="180" height="14" rx="7" fill="#33333b"/><rect x="120" y="841" width="260" height="14" rx="7" fill="#4a4a52"/><rect x="740" y="841" width="180" height="14" rx="7" fill="#33333b"/><rect x="120" y="887" width="220" height="14" rx="7" fill="#4a4a52"/><rect x="700" y="887" width="180" height="14" rx="7" fill="#33333b"/>
+
+<rect x="1000" y="300" width="520" height="640" rx="24" fill="#16161a"/>
+<polygon points="1260,370 1400,450 1400,610 1260,690 1120,610 1120,450" fill="none" stroke="#c084fc" stroke-width="5"/>
+<polygon points="1260,430 1345,580 1175,580" fill="#c084fc" fill-opacity="0.18" stroke="#c084fc" stroke-width="3"/>
+<text x="1260" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="64" fill="#ededed">17</text>
+<rect x="1110" y="760" width="300" height="56" rx="28" fill="#c084fc"/>
+<text x="1260" y="797" text-anchor="middle" font-family="monospace" font-size="22" fill="#0e0e11">ROLL D20</text>
+<rect x="1160" y="850" width="200" height="12" rx="6" fill="#33333b"/>
+</svg>
