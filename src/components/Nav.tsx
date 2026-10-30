@@ -3,6 +3,7 @@ import type { MouseEvent } from 'react'
 import { useActiveSection } from '../hooks/useActiveSection'
 import { scrollToTarget } from '../lib/scroll'
 import { easeOutExpo } from '../lib/motion'
+import { Magnetic } from './Magnetic'
 
 const links = [
   { id: 'about', label: 'About' },
@@ -37,28 +38,31 @@ export function Nav() {
           aria-label="Main"
           className="border-line bg-bg/70 pointer-events-auto flex items-center gap-0.5 rounded-full border p-1.5 shadow-[0_8px_30px_rgb(0_0_0/0.35)] backdrop-blur-md"
         >
-          <a href="#top" onClick={onAnchorClick} aria-label="Back to top" className="px-3 font-serif text-xl leading-none italic">
-            P<span className="text-accent">.</span>
-          </a>
-          {links.map((link) => (
-            <a
-              key={link.id}
-              href={`#${link.id}`}
-              onClick={onAnchorClick}
-              aria-current={active === link.id ? 'true' : undefined}
-              className={`relative rounded-full px-3 py-1.5 text-[13px] transition-colors duration-300 sm:px-4 sm:text-sm ${
-                active === link.id ? 'text-fg' : 'text-muted hover:text-fg'
-              }`}
-            >
-              {active === link.id && (
-                <motion.span
-                  layoutId="nav-pill"
-                  className="bg-fg/10 absolute inset-0 rounded-full"
-                  transition={{ type: 'spring', stiffness: 380, damping: 32 }}
-                />
-              )}
-              <span className="relative">{link.label}</span>
+          <Magnetic>
+            <a href="#top" onClick={onAnchorClick} aria-label="Back to top" className="block px-3 font-serif text-xl leading-none italic">
+              P<span className="text-accent">.</span>
             </a>
+          </Magnetic>
+          {links.map((link) => (
+            <Magnetic key={link.id}>
+              <a
+                href={`#${link.id}`}
+                onClick={onAnchorClick}
+                aria-current={active === link.id ? 'true' : undefined}
+                className={`relative block rounded-full px-3 py-1.5 text-[13px] transition-colors duration-300 sm:px-4 sm:text-sm ${
+                  active === link.id ? 'text-fg' : 'text-muted hover:text-fg'
+                }`}
+              >
+                {active === link.id && (
+                  <motion.span
+                    layoutId="nav-pill"
+                    className="bg-fg/10 absolute inset-0 rounded-full"
+                    transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+                  />
+                )}
+                <span className="relative">{link.label}</span>
+              </a>
+            </Magnetic>
           ))}
         </nav>
       </motion.header>

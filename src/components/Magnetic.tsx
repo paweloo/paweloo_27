@@ -1,12 +1,15 @@
 import { motion, useMotionValue, useSpring } from 'motion/react'
 import type { PointerEvent, ReactNode } from 'react'
 
-/** Pulls its child toward the mouse while hovered. */
-export function Magnetic({ children, strength = 0.35 }: { children: ReactNode; strength?: number }) {
+// Slightly over-damped so the pull settles without bouncing
+const spring = { stiffness: 200, damping: 20, mass: 0.4 }
+
+/** Gently pulls its child toward the mouse while hovered. */
+export function Magnetic({ children, strength = 0.12 }: { children: ReactNode; strength?: number }) {
   const x = useMotionValue(0)
   const y = useMotionValue(0)
-  const springX = useSpring(x, { stiffness: 220, damping: 15, mass: 0.3 })
-  const springY = useSpring(y, { stiffness: 220, damping: 15, mass: 0.3 })
+  const springX = useSpring(x, spring)
+  const springY = useSpring(y, spring)
 
   const onPointerMove = (e: PointerEvent<HTMLDivElement>) => {
     if (e.pointerType !== 'mouse') return

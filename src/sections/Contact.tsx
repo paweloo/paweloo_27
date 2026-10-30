@@ -26,7 +26,7 @@ function CopyEmail() {
   }
 
   return (
-    <Magnetic strength={0.2}>
+    <Magnetic>
       <button
         type="button"
         onClick={copy}
