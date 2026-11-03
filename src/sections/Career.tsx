@@ -98,7 +98,8 @@ export function Career() {
             className="grid gap-12 md:grid-cols-12 md:gap-10"
           >
             <motion.div variants={item} className="md:col-span-4">
-              <p className="text-fg/85 leading-relaxed">{job.summary}</p>
+              {job.lead && <p className="mb-5 font-serif text-3xl leading-[1.1] md:text-4xl">{job.lead}</p>}
+              <p className={`leading-relaxed ${job.lead ? 'text-muted' : 'text-fg/85'}`}>{job.summary}</p>
 
               {job.highlights && (
                 <dl className="mt-8 flex gap-10">

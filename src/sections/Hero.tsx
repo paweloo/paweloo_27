@@ -89,7 +89,7 @@ export function Hero() {
           <h1 className="font-serif text-[clamp(3.25rem,9vw,7.5rem)] leading-[0.92] tracking-[-0.02em]">
             <span className="sr-only">{headline[0]}</span>
             {/* Invisible full text reserves the final size so typing never shifts the layout */}
-            <span aria-hidden className="grid">
+            <span aria-hidden className="grid whitespace-pre-line">
               <span className="invisible [grid-area:1/1]">{headline[0]}</span>
               <span className="[grid-area:1/1]">
                 <TypedHeadline length={title.length} />

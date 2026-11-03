@@ -19,6 +19,8 @@ export type Experience = {
   start: string;
   end: string;
   url?: string;
+  // Optional headline sentence, shown larger above the summary
+  lead?: string;
   summary: string;
   highlights?: { value: string; label: string }[];
   awards?: string[];
@@ -39,7 +41,7 @@ export type Project = {
 export const profile = {
   name: "Pawel",
   role: "Software Engineer",
-  headline: "Hey there, I’m *Pawel*!",
+  headline: "Hey there,\nI’m *Pawel*!",
   taglines: [
     "I build React apps that feel fast.",
     "I sweat the small interactions.",
@@ -66,8 +68,8 @@ export const about = {
   statement:
     "Between building *BI software* at Strategy and small projects for friends and local communities, I’m trying to tire out *my cat* enough that it stops biting my cables.",
   paragraphs: [
-    "Day to day I’m a tech lead at Strategy, building BI software that helps people make sense of massive data models. The role goes well beyond writing code — I work closely with product and customers to shape what we build, not just how we build it.",
-    "Before that I was at Sony, where I built software for tracking competitors’ promotional campaigns. Off the clock I’m usually automating something around my house — if it can be scripted, it probably already is.",
+    "Day to day I’m a tech lead at Strategy, building BI software that helps people make sense of massive data models. The role goes well beyond code: I work closely with product managers and customers to shape what we build, not just how we build it.",
+    "Before that I was at Sony, where I came up with the idea of automating competitor price tracking, so we could react to market changes much faster. Outside of work, you’ll find me training for my next race or tinkering with side projects.",
   ],
   facts: [
     { label: "Based in", value: "Gdynia, Warsaw, Poland, Remote" },
@@ -175,8 +177,9 @@ export const experience: Experience[] = [
     company: "Sony",
     start: "2018",
     end: "2021",
+    lead: "Where I went from the sales floor to writing my first production software.",
     summary:
-      "Where I went from the sales floor to writing my first production software.",
+      "Working directly with customers taught me to see things from their perspective, which I now use to design software that solves real problems and fits customers’ needs.",
     roles: [
       {
         title: "Team Mentor",
@@ -185,7 +188,7 @@ export const experience: Experience[] = [
         bullets: [
           {
             label: "Python initiative",
-            text: "On my own initiative, built a Python web app for analyzing promotional campaigns, working with marketing and analytics to fit it to company needs.",
+            text: "On my own initiative, built a Python web app for analyzing competitors’ promotional campaigns, working with marketing and analytics to fit it to company needs. It let Sony react to competing promotions faster and adjust product prices to stay competitive.",
           },
           {
             label: "Team leadership",
