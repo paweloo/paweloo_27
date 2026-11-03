@@ -97,15 +97,16 @@ export const experience: Experience[] = [
     start: "2021",
     end: "Now",
     url: "https://www.strategy.com",
+    lead: "Where I grew from associate engineer to tech lead in under three years.",
     summary:
-      "Formerly MicroStrategy. I build the add-ins that bring enterprise BI into Microsoft Office and Google Workspace.",
+      "Formerly MicroStrategy. I build the add-ins that bring Strategy’s enterprise BI straight into Microsoft Office and Google Sheets, so people can work with live data in the tools they already use.",
     highlights: [
       { value: "5×", label: "Employee of the Month" },
       { value: "2×", label: "Employee of the Quarter" },
     ],
     awards: [
-      "Q3 2025 — led the architecture and delivery of the Google Sheets add-on, opening a new acquisition channel for business clients.",
-      "Q2 2023 — managed concurrent feature launches on schedule, directly securing new business accounts.",
+      "Q3 2025 — for leading the architecture and delivery of the Google Sheets add-on, which opened a new acquisition channel for business clients.",
+      "Q2 2023 — for shipping several concurrent feature launches on schedule, directly securing new business accounts.",
     ],
     roles: [
       {
@@ -115,15 +116,15 @@ export const experience: Experience[] = [
         bullets: [
           {
             label: "Leadership & architecture",
-            text: "Lead development of React-based add-ins for Office and Google Workspace, coordinating teams across Poland, the US and China.",
+            text: "Lead development of React-based add-ins for Microsoft Office and Google Workspace, coordinating engineers across Poland, the US and China, owning architecture decisions end to end.",
           },
           {
             label: "Customers & product",
-            text: "Partner directly with enterprise customers, turning use cases and defect reports into high-priority requirements and shaping roadmaps with PMs.",
+            text: "Partner directly with enterprise customers, turning their use cases and defect reports into high-priority requirements, and shape roadmaps with PMs.",
           },
           {
             label: "AI workflows",
-            text: "Pioneered internal AI spec kits that standardize and speed up development across multiple large global repositories.",
+            text: "Pioneered internal GitHub Copilot spec kits that speed up development and keep architecture consistent across multiple large global repositories.",
           },
         ],
       },
@@ -134,15 +135,15 @@ export const experience: Experience[] = [
         bullets: [
           {
             label: "Data parsing",
-            text: "Designed algorithms that translate Strategy data formats directly into Microsoft Office API structures within tight product constraints.",
+            text: "Designed algorithms that translate Strategy data formats directly into Office.js structures, working within tight product constraints.",
           },
           {
-            label: "Automation",
-            text: "Built Python testing and workflow pipelines that cut testing effort from days to hours.",
+            label: "Test automation",
+            text: "Built automated testing and workflow pipelines with Python and Selenium, cutting testing effort from days to hours and speeding up release cycles.",
           },
           {
             label: "Feature design",
-            text: "Authored design docs and built UI and authentication components with PMs and UX designers, from concept to production.",
+            text: "Authored software design documents and built UI and authentication components, taking features from concept to production with PMs and UX designers.",
           },
         ],
       },
@@ -153,11 +154,15 @@ export const experience: Experience[] = [
         bullets: [
           {
             label: "Cloud apps",
-            text: "Developed core features of Strategy Workstation for managing resources across cloud environments, including customized email subscriptions.",
+            text: "Developed core features of the Strategy Workstation app for managing resources across cloud environments.",
+          },
+          {
+            label: "Subscriptions",
+            text: "Built customized email subscriptions that deliver BI content straight to users’ inboxes.",
           },
           {
             label: "Frontend & APIs",
-            text: "Implemented custom grid views that fetch and parse complex API data into interactive UI components.",
+            text: "Implemented custom React grid views that fetch and parse complex API data into interactive UI components.",
           },
         ],
       },
@@ -165,12 +170,20 @@ export const experience: Experience[] = [
     tech: [
       "React",
       "TypeScript",
-      "Office API",
+      "Redux",
+      "Node.js",
+      "Office.js",
+      "Google Apps Script",
       "Google Workspace API",
-      "Python",
       "Jest",
+      "Cucumber.js",
       "WebdriverIO",
+      "Python",
+      "Selenium",
       "Jenkins",
+      "GitHub",
+      "Jira",
+      "Rally",
     ],
   },
   {
