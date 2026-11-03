@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Paweł Zajk</title>
+    <meta name="author" content="Paweł Zajk" />
+    <meta name="description" content="CV — Senior Software Engineer · Tech Lead" />
+    <style>
+      /*
+        Same typefaces as the portfolio site. Static weights, each with latin + latin-ext merged
+        into one file: variable fonts embed as Type3 in Chrome's PDFs, and split subsets make
+        PDF text read "Pawe ł" instead of "Paweł".
+      */
+      @font-face {
+        font-family: 'Instrument Serif';
+        font-weight: 400;
+        src: url('fonts/InstrumentSerif-Regular.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Geist';
+        font-weight: 400;
+        src: url('fonts/Geist-Regular.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Geist';
+        font-weight: 600;
+        src: url('fonts/Geist-SemiBold.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-weight: 400;
+        src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-weight: 500;
+        src: url('fonts/JetBrainsMono-Medium.woff2') format('woff2');
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      :root {
+        --ink: #14141a;
+        --body: #2f2f37;
+        --muted: #6b6b76;
+        --line: #e3e3ea;
+        --accent: #4d7cff;
+        /* Darker accent for small text, so it keeps contrast on white paper */
+        --accent-ink: #2f5fe6;
+        --serif: 'Instrument Serif', Georgia, serif;
+        --sans: 'Geist', 'Helvetica Neue', Arial, sans-serif;
+        --mono: 'JetBrains Mono', ui-monospace, monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 9mm 14mm 7mm;
+        color: var(--body);
+        font-family: var(--sans);
+        font-size: 8.6pt;
+        line-height: 1.34;
+      }
+
+      a {
+        color: var(--accent-ink);
+        text-decoration: none;
+      }
+
+      /* Header */
+      header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 8mm;
+        padding-bottom: 3mm;
+        border-bottom: 0.6pt solid var(--ink);
+      }
+
+      h1 {
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: 30pt;
+        line-height: 0.9;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+      }
+
+      /* Drawn as a shape, not a ".", so parsers read the name as "Paweł Zajk" */
+      h1 .dot {
+        display: inline-block;
+        width: 0.13em;
+        height: 0.13em;
+        margin-left: 0.05em;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+
+      .role {
+        margin-top: 1.6mm;
+        font-family: var(--mono);
+        font-size: 7.6pt;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent-ink);
+      }
+
+      .contact {
+        list-style: none;
+        text-align: right;
+        font-size: 8pt;
+        line-height: 1.5;
+        color: var(--body);
+      }
+
+      /* Sections */
+      section {
+        margin-top: 2.9mm;
+      }
+
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 2.5mm;
+        margin-bottom: 1.8mm;
+        font-family: var(--mono);
+        font-weight: 500;
+        font-size: 7.4pt;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent-ink);
+      }
+
+      h2::after {
+        content: '';
+        flex: 1;
+        height: 0.5pt;
+        background: var(--line);
+      }
+
+      .summary {
+        font-size: 8.9pt;
+        line-height: 1.38;
+        color: var(--ink);
+      }
+
+      /* Experience */
+      .company {
+        margin-top: 1.8mm;
+      }
+
+      .company:first-of-type {
+        margin-top: 0;
+      }
+
+      .row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 6mm;
+      }
+
+      h3 {
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: 13.5pt;
+        line-height: 1.1;
+        color: var(--ink);
+      }
+
+      h3 small {
+        font-family: var(--sans);
+        font-size: 8.4pt;
+        color: var(--muted);
+      }
+
+      .dates {
+        flex-shrink: 0;
+        font-family: var(--mono);
+        font-size: 7.4pt;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .awards {
+        margin-top: 0.6mm;
+        font-size: 8.2pt;
+        color: var(--accent-ink);
+      }
+
+      h4 {
+        font-size: 8.9pt;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .position {
+        margin-top: 1.6mm;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .bullets {
+        margin-top: 0.5mm;
+      }
+
+      /*
+        The dash is a background, not a positioned ::before: positioned elements are painted
+        last, which made Chrome write every bullet's text after the rest of the page.
+      */
+      .bullets li {
+        padding-left: 4mm;
+        margin-top: 0.35mm;
+        background: linear-gradient(var(--accent), var(--accent)) no-repeat 0.4mm 0.68em / 2mm 0.6pt;
+      }
+
+      strong {
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .tech {
+        color: var(--muted);
+      }
+
+      /* Skills */
+      .skills {
+        display: grid;
+        grid-template-columns: 30mm 1fr;
+        row-gap: 0.5mm;
+      }
+
+      .skills dt {
+        font-weight: 600;
+        color: var(--ink);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Paweł Zajk<span class="dot" aria-hidden="true"></span></h1>
+        <p class="role">Senior Software Engineer · Tech Lead</p>
+      </div>
+      <ul class="contact">
+        <li>Gdynia / Warsaw, Poland · Remote</li>
+        <li><a href="tel:+48694730832">+48 694 730 832</a> · <a href="mailto:pawelzajk@outlook.com">pawelzajk@outlook.com</a></li>
+        <li><a href="https://pawelzajk.pl">pawelzajk.pl</a> · <a href="https://www.linkedin.com/in/pawel-zajk">linkedin.com/in/pawel-zajk</a></li>
+      </ul>
+    </header>
+
+    <section>
+      <h2>Summary</h2>
+      <p class="summary">
+        Tech lead with 5+ years building BI products at Strategy (formerly MicroStrategy) and 3+ years in customer-facing roles.
+        I work directly with enterprise customers and product managers to define new features, make the final design and
+        architecture decisions for my team, and ship React and TypeScript add-ins used by thousands of business users in
+        Microsoft Office and Google Workspace.
+      </p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="company">
+        <div class="row">
+          <h3>Strategy <small>(formerly MicroStrategy)</small></h3>
+          <span class="dates">Jun 2021 – Present</span>
+        </div>
+        <p class="awards">5× Employee of the Month · 2× Employee of the Quarter (Q3 2025, Q2 2023)</p>
+
+        <div class="position">
+          <div class="row">
+            <h4>Senior Software Engineer / Team Lead</h4>
+            <span class="dates">Jan 2024 – Present</span>
+          </div>
+          <ul class="bullets">
+            <li>Define new features with enterprise customers and product managers, turning business use cases and defect reports into prioritized requirements, roadmaps and scope.</li>
+            <li>Lead a team of 6+ engineers across Poland, the US and China, and make the final design and architecture decisions for the Office and Google Workspace add-ins.</li>
+            <li>Led the Google Sheets add-on from architecture to Google Workspace Marketplace launch in one quarter. It kept one of our largest customers through their move from Excel to Sheets and has won 5+ new customers so far (Employee of the Quarter, Q3 2025).</li>
+            <li>Integrate Strategy’s APIs with Office.js and Google Apps Script to bring live BI data into the tools clients already use; for Google Sheets, designed chunked, parallel data loading that moves large datasets within Apps Script’s speed and quota limits.</li>
+            <li>Introduced GitHub Copilot spec kits, now adopted by other teams across 10 repositories, so generated code follows each repo’s schemas and guidelines and needs fewer architecture fixes in review.</li>
+          </ul>
+        </div>
+
+        <div class="position">
+          <div class="row">
+            <h4>Software Engineer</h4>
+            <span class="dates">Oct 2022 – Dec 2023</span>
+          </div>
+          <ul class="bullets">
+            <li>Delivered 6 new features in parallel, all on schedule (Employee of the Quarter, Q2 2023).</li>
+            <li>Designed algorithms that convert Strategy data formats into Office.js structures within tight product constraints.</li>
+            <li>Built automated test and workflow pipelines in Python and Selenium, cutting testing from days to hours and speeding up releases.</li>
+            <li>Wrote design docs and built UI and authentication components with PMs and UX designers, from concept to production.</li>
+          </ul>
+        </div>
+
+        <div class="position">
+          <div class="row">
+            <h4>Software Engineer Associate</h4>
+            <span class="dates">Jun 2021 – Sep 2022</span>
+          </div>
+          <ul class="bullets">
+            <li>Built core Strategy Workstation features for managing cloud resources, including customized email subscriptions.</li>
+            <li>Implemented React grid views that fetch and parse complex API data into interactive UI components.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="company">
+        <div class="row">
+          <h3>Sony</h3>
+          <span class="dates">Feb 2018 – May 2021</span>
+        </div>
+
+        <div class="position">
+          <div class="row">
+            <h4>Team Mentor <small class="tech">(sales team)</small></h4>
+            <span class="dates">May 2019 – May 2021</span>
+          </div>
+          <ul class="bullets">
+            <li>Outside my sales duties and on my own initiative, built a Python and Flask web app (Selenium, AWS) that tracked competitors’ prices and promotions, cutting Sony’s reaction time to competitor price changes from days to the same day; shaped it with the marketing and analytics teams.</li>
+            <li>Ran end-to-end interviewing and onboarding for new hires and tracked team performance metrics.</li>
+          </ul>
+        </div>
+
+        <div class="position">
+          <div class="row">
+            <h4>Sales Advisor</h4>
+            <span class="dates">Feb 2018 – May 2019</span>
+          </div>
+          <ul class="bullets">
+            <li>Advised customers, wrote weekly cross-store sales reports, drove product promotions and ran sales and product training for staff.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected projects</h2>
+      <ul class="bullets">
+        <li><strong>Pola Jewelry</strong> — headless Shopify storefront for a family jewelry brand, with a build-your-own bracelet configurator and server-side rendering for SEO. <span class="tech">Next.js, React, Shopify Storefront API ·</span> <a href="https://polajewelry.pl">polajewelry.pl</a></li>
+        <li><strong>Valdek</strong> — payment checker for a local theatre: matches the Google Sheets attendee list against bank-statement PDFs to show who has paid. <span class="tech">Next.js, Google Drive API, Google Apps Script</span></li>
+        <li><strong>E-Ink Smart Calendar</strong> — always-on Raspberry Pi dashboard with an e-ink display, synced live with Google Calendar. <span class="tech">Raspberry Pi, Google Calendar API</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Core</dt>
+        <dd>TypeScript, JavaScript (ES6+), React, Redux, Node.js, Python, Office.js, Google Apps Script, Strategy (MicroStrategy)</dd>
+        <dt>Web &amp; integrations</dt>
+        <dd>Next.js, HTML5, CSS3, Sass, Google Workspace APIs, REST APIs, Shopify Storefront API</dd>
+        <dt>Testing &amp; delivery</dt>
+        <dd>Jest, Cucumber.js, WebdriverIO, Selenium, GitHub, GitHub Copilot, Jenkins, CI/CD, Jira, Rally</dd>
+        <dt>Also used</dt>
+        <dd>Flask, AWS, Firebase, Figma, PHP, Dart, Flutter</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="row">
+        <p><strong>Bachelor of Engineering, Computer Science (Programming)</strong> · WSB University in Gdańsk</p>
+        <span class="dates">Oct 2017 – Feb 2021</span>
+      </div>
+    </section>
+  </body>
+</html>
