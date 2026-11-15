@@ -232,39 +232,64 @@ export const projects: Project[] = [
   {
     title: "Pola Jewelry",
     description:
-      "A custom headless storefront for a family jewelry brand, with a build-your-own bracelet and charms configurator — server-side rendered for speed and SEO, with Shopify running the backend.",
+      "A custom headless Shopify storefront for a jewelry brand rooted in 30+ years of family craft. Shoppers build their own bracelet from live charms, order pieces engraved from their own photo, and save favourites to their account.",
     image: "/projects/pola-jewelry.webp",
     href: "https://polajewelry.pl",
     frame: "mac",
-    tags: ["Next.js", "React", "Shopify Storefront API", "SSR"],
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Shopify Storefront API",
+      "GraphQL",
+      "Instagram Graph API",
+    ],
   },
   {
     title: "E-Ink Smart Calendar",
     description:
-      "A physical, always-on dashboard: a Raspberry Pi drives an e-ink display that stays in sync with Google Calendar in real time.",
-    image: "/projects/eink-calendar.webp",
-    tags: ["Raspberry Pi", "Google Calendar API", "E-ink", "IoT"],
+      "A Google Calendar on a 7.5\" e-paper panel, driven by a Raspberry Pi Zero. Set up entirely from a phone: scan a QR code, pick Wi-Fi, link Google with a code from the screen, then change views and themes in a local web app.",
+    image: "/projects/eink-calendar-desk.jpg",
+    tags: [
+      "Python",
+      "Raspberry Pi",
+      "E-ink",
+      "IoT",
+      "Linux",
+      "Google Calendar API",
+      "Flask",
+    ],
   },
   {
     title: "Price Tracker",
     description:
-      "Built at Sony Poland: a cloud-hosted scraping and monitoring pipeline that tracks pricing data in real time and fires automated alerts.",
+      "Built at Sony Poland to monitor competitors’ prices: a cloud-hosted scraping pipeline that tracks pricing in real time, fires automated alerts, and compiles the findings into an Excel report.",
     image: "/projects/price-tracker.svg",
     tags: ["Python", "Flask", "Selenium", "AWS"],
   },
   {
     title: "Valdek",
     description:
-      "A payment checker for a local theatre’s classes: it reads the attendee list from Google Sheets, takes the bank statement PDF and shows who has — and hasn’t — paid.",
+      "Payment reconciliation for a local theatre’s classes. It reads bank statement PDFs, fuzzy-matches each transfer to a participant by name and month, flags partial and overpayments, and writes the confirmed results back to the Google Sheet.",
     image: "/projects/valdek.webp",
-    tags: ["Next.js", "Google Drive API", "Google Apps Script"],
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Google Sheets API",
+      "PDF.js",
+      "SheetJS",
+      "Vercel",
+    ],
   },
   {
-    // Placeholder name, image and tags — update once the details are in
+    // Placeholder name and image — update once the details are in
     title: "D&D Character Tracker",
     description:
-      "A companion for tabletop sessions that keeps track of a player’s character during a D&D game — so nobody has to dig through paper sheets mid-fight.",
+      "A D&D 5e character sheet for the table: tap any skill or save to roll it with advantage or disadvantage, and modifiers, temp HP, death saves and rests follow the rules automatically. Saves in the browser, exports to JSON.",
     image: "/projects/dnd-tracker.svg",
-    tags: [],
+    tags: ["React", "TypeScript", "Vite", "CSS"],
   },
 ];
