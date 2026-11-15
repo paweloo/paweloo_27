@@ -13,6 +13,28 @@ function spanFor(index: number, count: number) {
   return index === count - 1 && index % 2 === 0 ? lonelySpan : spans[index % spans.length]
 }
 
+// macOS-style browser title bar: traffic lights plus an address pill with the site's domain
+function MacWindowBar({ href }: { href?: string }) {
+  const domain = href ? new URL(href).hostname.replace(/^www\./, '') : undefined
+  return (
+    <div className="border-line relative flex h-9 items-center border-b bg-[#1a1a1d] px-3.5" aria-hidden="true">
+      <div className="flex gap-1.5">
+        <span className="size-2.5 rounded-full bg-[#ff5f57]" />
+        <span className="size-2.5 rounded-full bg-[#febc2e]" />
+        <span className="size-2.5 rounded-full bg-[#28c840]" />
+      </div>
+      {domain && (
+        <div className="text-muted absolute left-1/2 flex h-5 w-2/5 max-w-60 -translate-x-1/2 items-center justify-center gap-1.5 rounded-md bg-white/5 font-mono text-[10px]">
+          <svg viewBox="0 0 16 16" className="size-2.5 fill-current opacity-70">
+            <path d="M4 7V5a4 4 0 1 1 8 0v2h.5A1.5 1.5 0 0 1 14 8.5v5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5v-5A1.5 1.5 0 0 1 3.5 7H4Zm2 0h4V5a2 2 0 1 0-4 0v2Z" />
+          </svg>
+          {domain}
+        </div>
+      )}
+    </div>
+  )
+}
+
 function ProjectCard({ project }: { project: Project }) {
   const px = useMotionValue(0)
   const py = useMotionValue(0)
@@ -39,12 +61,15 @@ function ProjectCard({ project }: { project: Project }) {
         style={{ rotateX, rotateY }}
         className="border-line bg-surface relative overflow-hidden rounded-2xl border transform-3d"
       >
-        <img
-          src={project.image}
-          alt={`Screenshot of ${project.title}`}
-          loading="lazy"
-          className="aspect-[16/10] w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
-        />
+        {project.frame === 'mac' && <MacWindowBar href={project.href} />}
+        <div className="overflow-hidden">
+          <img
+            src={project.image}
+            alt={`Screenshot of ${project.title}`}
+            loading="lazy"
+            className="aspect-[16/10] w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
+          />
+        </div>
         <div className="from-bg/90 absolute inset-x-0 bottom-0 bg-gradient-to-t to-transparent p-4 pt-16 opacity-0 transition-all duration-500 group-hover:opacity-100 group-focus-visible:opacity-100 pointer-coarse:opacity-100">
           <ul className="flex flex-wrap gap-2">
             {project.tags.map((tag, i) => (

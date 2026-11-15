@@ -36,6 +36,8 @@ export type Project = {
   tags: string[];
   // Without a link the tile is not clickable
   href?: string;
+  // "mac" shows the image inside a macOS browser window
+  frame?: "mac";
 };
 
 export const profile = {
@@ -233,6 +235,7 @@ export const projects: Project[] = [
       "A custom headless storefront for a family jewelry brand, with a build-your-own bracelet and charms configurator — server-side rendered for speed and SEO, with Shopify running the backend.",
     image: "/projects/pola-jewelry.webp",
     href: "https://polajewelry.pl",
+    frame: "mac",
     tags: ["Next.js", "React", "Shopify Storefront API", "SSR"],
   },
   {
