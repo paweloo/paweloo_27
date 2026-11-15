@@ -4,7 +4,7 @@
 export type Social = {
   label: string;
   href: string;
-  icon: "github" | "linkedin" | "x";
+  icon: "github" | "linkedin";
 };
 
 export type Role = {
@@ -43,16 +43,16 @@ export const profile = {
   role: "Software Engineer",
   headline: "Hey there,\nI’m *Pawel*!",
   taglines: [
-    "I build React apps that feel fast.",
-    "I sweat the small interactions.",
+    "I believe impossible doesn't exist.",
+    "I address real-world problems with code.",
     "I turn ideas into interfaces.",
-    "I ship accessible, typed UI.",
+    "I combine programming skills with sales experience.",
   ],
   status: "Senior Software Engineer",
   // Swap for your photo (e.g. /portrait.jpg). A cut-out on a dark/transparent background works best.
   portrait: "/portrait.webp",
   email: "pawelzajk@outlook.com",
-  resume: "#",
+  resume: "/Pawel-Zajk-CV.pdf",
   socials: [
     { label: "GitHub", href: "https://github.com/", icon: "github" },
     {
@@ -60,7 +60,6 @@ export const profile = {
       href: "https://www.linkedin.com/in/pawel-zajk/",
       icon: "linkedin",
     },
-    { label: "X", href: "https://x.com/", icon: "x" },
   ] satisfies Social[],
 };
 
@@ -233,6 +232,7 @@ export const projects: Project[] = [
     description:
       "A custom headless storefront for a family jewelry brand, with a build-your-own bracelet and charms configurator — server-side rendered for speed and SEO, with Shopify running the backend.",
     image: "/projects/pola-jewelry.webp",
+    href: "https://polajewelry.pl",
     tags: ["Next.js", "React", "Shopify Storefront API", "SSR"],
   },
   {
