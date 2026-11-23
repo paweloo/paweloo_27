@@ -57,9 +57,7 @@ export const profile = {
   // Swap for your photo (e.g. /portrait.jpg). A cut-out on a dark/transparent background works best.
   portrait: "/portrait.webp",
   email: "pawelzajk@outlook.com",
-  resume: "/Pawel-Zajk-CV.pdf",
   socials: [
-    { label: "GitHub", href: "https://github.com/", icon: "github" },
     {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/pawel-zajk/",

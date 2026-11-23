@@ -98,17 +98,6 @@ export function Contact() {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href={profile.resume}
-              target="_blank"
-              rel="noreferrer"
-              className="group hover:text-accent flex items-center justify-between py-4 transition-colors duration-300"
-            >
-              <span className="pl-7">Resume</span>
-              <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
-          </li>
         </ul>
       </Reveal>
 
