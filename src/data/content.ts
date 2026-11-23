@@ -1,6 +1,9 @@
 // All site copy lives here — replace the placeholders with your own content.
 // Wrap a word in *asterisks* to render it as the italic accent highlight.
 
+// Public assets are resolved against Vite's base, so the site works at "/" or a sub-path (GitHub Pages).
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 export type Social = {
   label: string;
   href: string;
@@ -55,7 +58,7 @@ export const profile = {
   ],
   status: "Senior Software Engineer",
   // Swap for your photo (e.g. /portrait.jpg). A cut-out on a dark/transparent background works best.
-  portrait: "/portrait.webp",
+  portrait: asset("portrait.webp"),
   email: "pawelzajk@outlook.com",
   socials: [
     {
@@ -236,11 +239,11 @@ export const projects: Project[] = [
     description:
       "A custom headless Shopify storefront for a jewelry brand rooted in 30+ years of family craft. Shoppers build their own bracelet from live charms, order pieces engraved from their own photo, and save favourites to their account.",
     image: [
-      "/projects/pola-jewelry-1.webp",
-      "/projects/pola-jewelry-2.webp",
-      "/projects/pola-jewelry-3.webp",
-      "/projects/pola-jewelry-4.webp",
-      "/projects/pola-jewelry-5.webp",
+      asset("projects/pola-jewelry-1.webp"),
+      asset("projects/pola-jewelry-2.webp"),
+      asset("projects/pola-jewelry-3.webp"),
+      asset("projects/pola-jewelry-4.webp"),
+      asset("projects/pola-jewelry-5.webp"),
     ],
     ratio: "40 / 21",
     href: "https://polajewelry.pl",
@@ -260,11 +263,11 @@ export const projects: Project[] = [
     description:
       'A Google Calendar on a 7.5" e-paper panel, driven by a Raspberry Pi Zero. Set up entirely from a phone: scan a QR code, pick Wi-Fi, link Google with a code from the screen, then change views and themes in a local web app. I also designed and built its product page, with a live demo of the real screens.',
     image: [
-      "/projects/eink-calendar-desk.jpg",
-      "/projects/eink-calendar-page-1.webp",
-      "/projects/eink-calendar-page-2.webp",
-      "/projects/eink-calendar-page-3.webp",
-      "/projects/eink-calendar-page-4.webp",
+      asset("projects/eink-calendar-desk.jpg"),
+      asset("projects/eink-calendar-page-1.webp"),
+      asset("projects/eink-calendar-page-2.webp"),
+      asset("projects/eink-calendar-page-3.webp"),
+      asset("projects/eink-calendar-page-4.webp"),
     ],
     href: "https://paweloo.github.io/eink-calendar/",
     tags: [
@@ -281,7 +284,7 @@ export const projects: Project[] = [
     title: "Price Tracker",
     description:
       "Built at Sony Poland to monitor competitors’ prices: a cloud-hosted scraping pipeline that tracks pricing in real time, fires automated alerts, and compiles the findings into an Excel report.",
-    image: "/projects/price-tracker.svg",
+    image: asset("projects/price-tracker.svg"),
     tags: ["Python", "Flask", "Selenium", "AWS"],
   },
   {
@@ -289,10 +292,10 @@ export const projects: Project[] = [
     description:
       "Payment reconciliation for a local theatre’s classes. It reads bank statement PDFs, fuzzy-matches each transfer to a participant by name and month, flags partial and overpayments, and writes the confirmed results back to the Google Sheet.",
     image: [
-      "/projects/valdek-1.webp",
-      "/projects/valdek-2.webp",
-      "/projects/valdek-3.webp",
-      "/projects/valdek-4.webp",
+      asset("projects/valdek-1.webp"),
+      asset("projects/valdek-2.webp"),
+      asset("projects/valdek-3.webp"),
+      asset("projects/valdek-4.webp"),
     ],
     frame: "mac",
     tags: [
@@ -311,7 +314,7 @@ export const projects: Project[] = [
     title: "D&D Character Tracker",
     description:
       "A D&D 5e character sheet for the table: tap any skill or save to roll it with advantage or disadvantage, and modifiers, temp HP, death saves and rests follow the rules automatically. Saves in the browser, exports to JSON.",
-    image: "/projects/dnd-tracker.svg",
+    image: asset("projects/dnd-tracker.svg"),
     tags: ["React", "TypeScript", "Vite", "CSS"],
   },
 ];
