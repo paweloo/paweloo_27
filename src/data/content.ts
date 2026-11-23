@@ -32,7 +32,10 @@ export type Project = {
   title: string;
   year?: string;
   description: string;
-  image: string;
+  // Several images cycle through like screens of the app
+  image: string | string[];
+  // Image aspect ratio as CSS, e.g. "40 / 21". Defaults to 16:10
+  ratio?: string;
   tags: string[];
   // Without a link the tile is not clickable
   href?: string;
@@ -233,7 +236,14 @@ export const projects: Project[] = [
     title: "Pola Jewelry",
     description:
       "A custom headless Shopify storefront for a jewelry brand rooted in 30+ years of family craft. Shoppers build their own bracelet from live charms, order pieces engraved from their own photo, and save favourites to their account.",
-    image: "/projects/pola-jewelry.webp",
+    image: [
+      "/projects/pola-jewelry-1.webp",
+      "/projects/pola-jewelry-2.webp",
+      "/projects/pola-jewelry-3.webp",
+      "/projects/pola-jewelry-4.webp",
+      "/projects/pola-jewelry-5.webp",
+    ],
+    ratio: "40 / 21",
     href: "https://polajewelry.pl",
     frame: "mac",
     tags: [
@@ -249,8 +259,15 @@ export const projects: Project[] = [
   {
     title: "E-Ink Smart Calendar",
     description:
-      "A Google Calendar on a 7.5\" e-paper panel, driven by a Raspberry Pi Zero. Set up entirely from a phone: scan a QR code, pick Wi-Fi, link Google with a code from the screen, then change views and themes in a local web app.",
-    image: "/projects/eink-calendar-desk.jpg",
+      "A Google Calendar on a 7.5\" e-paper panel, driven by a Raspberry Pi Zero. Set up entirely from a phone: scan a QR code, pick Wi-Fi, link Google with a code from the screen, then change views and themes in a local web app. I also designed and built its product page, with a live demo of the real screens.",
+    image: [
+      "/projects/eink-calendar-desk.jpg",
+      "/projects/eink-calendar-page-1.webp",
+      "/projects/eink-calendar-page-2.webp",
+      "/projects/eink-calendar-page-3.webp",
+      "/projects/eink-calendar-page-4.webp",
+    ],
+    href: "https://paweloo.github.io/eink-calendar/",
     tags: [
       "Python",
       "Raspberry Pi",
@@ -272,7 +289,13 @@ export const projects: Project[] = [
     title: "Valdek",
     description:
       "Payment reconciliation for a local theatre’s classes. It reads bank statement PDFs, fuzzy-matches each transfer to a participant by name and month, flags partial and overpayments, and writes the confirmed results back to the Google Sheet.",
-    image: "/projects/valdek.webp",
+    image: [
+      "/projects/valdek-1.webp",
+      "/projects/valdek-2.webp",
+      "/projects/valdek-3.webp",
+      "/projects/valdek-4.webp",
+    ],
+    frame: "mac",
     tags: [
       "React",
       "TypeScript",
