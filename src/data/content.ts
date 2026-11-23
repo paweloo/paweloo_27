@@ -71,7 +71,8 @@ export const about = {
     "Between building *BI software* at Strategy and small projects for friends and local communities, I’m trying to tire out *my cat* enough that it stops biting my cables.",
   paragraphs: [
     "Day to day I’m a tech lead at Strategy, building BI software that helps people make sense of massive data models. The role goes well beyond code: I work closely with product managers and customers to shape what we build, not just how we build it.",
-    "Before that I was at Sony, where I came up with the idea of automating competitor price tracking, so we could react to market changes much faster. Outside of work, you’ll find me training for my next race or tinkering with side projects.",
+    "Before that I was at Sony, where I came up with the idea of automating competitor price tracking, so we could react to market changes much faster.",
+    "Off the clock, I’m usually on a plane to somewhere I haven’t been yet, training for my next race, or tinkering with a side project.",
   ],
   facts: [
     { label: "Based in", value: "Gdynia, Warsaw, Poland, Remote" },
@@ -257,7 +258,7 @@ export const projects: Project[] = [
   {
     title: "E-Ink Smart Calendar",
     description:
-      "A Google Calendar on a 7.5\" e-paper panel, driven by a Raspberry Pi Zero. Set up entirely from a phone: scan a QR code, pick Wi-Fi, link Google with a code from the screen, then change views and themes in a local web app. I also designed and built its product page, with a live demo of the real screens.",
+      'A Google Calendar on a 7.5" e-paper panel, driven by a Raspberry Pi Zero. Set up entirely from a phone: scan a QR code, pick Wi-Fi, link Google with a code from the screen, then change views and themes in a local web app. I also designed and built its product page, with a live demo of the real screens.',
     image: [
       "/projects/eink-calendar-desk.jpg",
       "/projects/eink-calendar-page-1.webp",

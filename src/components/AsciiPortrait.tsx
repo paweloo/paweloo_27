@@ -26,8 +26,7 @@ const randomGlyph = () => GLYPHS[(Math.random() * GLYPHS.length) | 0]
 /**
  * Renders an image as ASCII characters on a canvas. Characters near the
  * pointer are pushed away, turn into code glyphs and spring back home.
- * When the pointer is idle (or on touch devices) a "ghost" pointer drifts
- * across the portrait so it always feels alive.
+ * Without a pointer nearby the portrait rests.
  */
 export function AsciiPortrait({ src, label, className }: { src: string; label: string; className?: string }) {
   const wrapRef = useRef<HTMLDivElement>(null)
@@ -71,17 +70,9 @@ export function AsciiPortrait({ src, label, className }: { src: string; label: s
     }
 
     const tick = (t: number) => {
-      const idle = t - pointer.last > 2200
-      let px = pointer.x
-      let py = pointer.y
-      let strength = 1
-      if (idle) {
-        // Lissajous drift for the ghost pointer
-        const s = t * 0.00032
-        px = width * (0.5 + 0.34 * Math.sin(s * 1.3))
-        py = height * (0.46 + 0.3 * Math.sin(s * 0.9 + 1))
-        strength = 0.4
-      }
+      const active = t - pointer.last < 2200
+      const px = pointer.x
+      const py = pointer.y
       const radius = Math.max(56, width * 0.15) * (1 + pointer.burst)
       const r2 = radius * radius
       pointer.burst *= 0.9
@@ -90,9 +81,9 @@ export function AsciiPortrait({ src, label, className }: { src: string; label: s
         const dx = p.x - px
         const dy = p.y - py
         const d2 = dx * dx + dy * dy
-        if (d2 < r2) {
+        if (active && d2 < r2) {
           const d = Math.sqrt(d2) || 1
-          const f = (1 - d / radius) * strength
+          const f = 1 - d / radius
           p.vx += (dx / d) * f * 3.4
           p.vy += (dy / d) * f * 3.4
           p.heat = Math.min(1, p.heat + f * 0.45)
@@ -210,7 +201,11 @@ export function AsciiPortrait({ src, label, className }: { src: string; label: s
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
       const margin = 80
-      if (x < -margin || y < -margin || x > rect.width + margin || y > rect.height + margin) return
+      // Leaving the portrait lets it settle right away
+      if (x < -margin || y < -margin || x > rect.width + margin || y > rect.height + margin) {
+        pointer.last = -Infinity
+        return
+      }
       pointer.x = x
       pointer.y = y
       pointer.last = performance.now()
