@@ -119,7 +119,7 @@ export function AsciiPortrait({ src, label, className }: { src: string; label: s
       canvas.height = Math.round(height * dpr)
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
 
-      fontSize = width < 380 ? 6.5 : width < 520 ? 7.5 : 8.5
+      fontSize = width < 380 ? 5 : width < 520 ? 5.5 : 6
       const cellW = fontSize * 0.62
       const cellH = fontSize * 1.05
       const cols = Math.floor(width / cellW)

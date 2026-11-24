@@ -150,7 +150,7 @@ export function Hero() {
           <AsciiPortrait
             src={profile.portrait}
             label={`ASCII portrait of ${profile.name}`}
-            className="mx-auto aspect-[4/5] w-[min(64vw,22rem)] md:w-full md:max-w-[34rem]"
+            className="mx-auto aspect-[4/5] w-[min(50vw,17rem)] md:w-full md:max-w-[25rem]"
           />
         </motion.div>
       </div>
